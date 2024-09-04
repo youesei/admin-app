@@ -1,4 +1,4 @@
-import { emailSchema, passwordSchema } from "@/pages/schemas";
+import { emailSchema, passwordSchema } from "@schemas/globalsSchemas";
 import { z } from "zod";
 
 export const loginSchema = z.object({

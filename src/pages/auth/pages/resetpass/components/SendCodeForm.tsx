@@ -1,3 +1,5 @@
+import { useFormulary } from "@hooks/useFormulary";
+import { Button } from "@ui/button";
 import {
 	Form,
 	FormControl,
@@ -5,13 +7,11 @@ import {
 	FormItem,
 	// FormLabel,
 	FormMessage,
-	Input,
-	Button,
-} from "@/components/ui";
-import { useFormulary } from "@/pages/hooks";
-import { sendCodeInitialValues } from "../models";
-import { sendCodeSchema } from "../schemas";
-import { useResetPassContext } from "../hooks";
+} from "@ui/form";
+import { Input } from "@ui/input";
+import { sendCodeInitialValues } from "../constants/sendCodeInitialValues";
+import { useResetPassContext } from "../hooks/useResetPassContext";
+import { sendCodeSchema } from "../schemas/resetPassSchemas";
 
 export const SendCodeForm = () => {
 	const { form } = useFormulary(sendCodeSchema, sendCodeInitialValues);

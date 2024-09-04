@@ -5,7 +5,7 @@ import {
 	passwordConfirmSchema,
 	passwordSchema,
 	phoneSchema,
-} from "@/pages/schemas";
+} from "@schemas/globalsSchemas";
 import { z } from "zod";
 
 export const registerSchema = z.object({

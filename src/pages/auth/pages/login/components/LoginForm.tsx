@@ -1,3 +1,6 @@
+import { ROUTES } from "@constants/globalConsts";
+import { useFormulary } from "@hooks/useFormulary";
+import { Button } from "@ui/button";
 import {
 	Form,
 	FormControl,
@@ -5,16 +8,14 @@ import {
 	FormItem,
 	FormLabel,
 	FormMessage,
-	Input,
-	Button,
-} from "@/components/ui";
+} from "@ui/form";
+import { Input } from "@ui/input";
 import { Link } from "react-router-dom";
-import { useFormulary } from "@/pages/hooks";
-import { loginSchema } from "../schemas";
-import { loginInitValues } from "../models";
+import { loginInitialValues } from "../constants/loginInitialValues";
+import { loginSchema } from "../schemas/loginSchemas";
 
 export const LoginForm = () => {
-	const { form } = useFormulary(loginSchema, loginInitValues);
+	const { form } = useFormulary(loginSchema, loginInitialValues);
 
 	return (
 		<Form {...form}>
@@ -52,7 +53,7 @@ export const LoginForm = () => {
 							<FormItem>
 								<div className="flex items-center justify-between">
 									<FormLabel>Contraseña</FormLabel>
-									<Link className="text-sm underline" to="/resetpass">
+									<Link className="text-sm underline" to={ROUTES.RESETPASS}>
 										Olvidaste tu contraseña?
 									</Link>
 								</div>
@@ -76,7 +77,10 @@ export const LoginForm = () => {
 
 			<p className="flex items-center justify-center mt-2 text-xs text-gray-400 gap-x-1">
 				¿No tienes una cuenta?
-				<Link className="text-xs underline hover:text-gray-100" to="/register">
+				<Link
+					className="text-xs underline hover:text-gray-100"
+					to={ROUTES.REGISTER}
+				>
 					Regístrate
 				</Link>
 			</p>

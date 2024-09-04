@@ -1,5 +1,6 @@
-import { AuthHeader, AuthLayout } from "../../../layout";
-import { RegisterForm } from "../components";
+import { AuthHeader } from "@pages/auth/layout/AuthHeader";
+import { AuthLayout } from "@pages/auth/layout/AuthLayout";
+import { RegisterForm } from "../components/RegisterForm";
 
 export const RegisterPage = () => {
 	return (

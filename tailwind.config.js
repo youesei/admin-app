@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        '19': 'repeat(auto-fit, minmax( 200px, 1fr ))',
+        responsive: 'repeat(auto-fit, minmax( 200px, 1fr ))',
       },
       colors: {
         border: "hsl(var(--border))",
@@ -74,13 +74,29 @@ module.exports = {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "caret-blink": "caret-blink 1.25s ease-out infinite",
+        "caret-blink": "caret-blink 1.25s ease-out infinite"
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    ({ addUtilities }) => {
+      addUtilities({
+        '.scrollbar-hide': {
+          /* Hide scrollbar for Webkit-based browsers */
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
+          /* Hide scrollbar for Firefox */
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        },
+      });
+    },
+    require("tailwindcss-animate"),
+  ],
 }

@@ -1,21 +1,21 @@
+import { ROUTES } from "@constants/globalConsts";
+import { useFormulary } from "@hooks/useFormulary";
+import { userSchema } from "@schemas/userSchemas";
+import { Button } from "@ui/button";
 import {
 	Form,
 	FormControl,
-	// FormDescription,
 	FormField,
 	FormItem,
 	FormLabel,
 	FormMessage,
-	Input,
-	Button,
-} from "@/components/ui";
+} from "@ui/form";
+import { Input } from "@ui/input";
 import { Link } from "react-router-dom";
-import { useFormulary } from "@/pages/hooks";
-import { registerInitialValues } from "../models";
-import { registerSchema } from "../schemas";
+import { registerInitialValues } from "../constants/registerInitialValues";
 
 export const RegisterForm = () => {
-	const { form } = useFormulary(registerSchema, registerInitialValues);
+	const { form } = useFormulary(userSchema, registerInitialValues);
 
 	return (
 		<Form {...form}>
@@ -150,7 +150,10 @@ export const RegisterForm = () => {
 
 			<p className="flex items-center justify-center mt-2 text-xs text-gray-400 gap-x-1">
 				¿Ya tienes una cuenta?
-				<Link className="text-xs underline hover:text-gray-100" to="/login">
+				<Link
+					className="text-xs underline hover:text-gray-100"
+					to={ROUTES.LOGIN}
+				>
 					Accede
 				</Link>
 			</p>

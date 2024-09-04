@@ -1,8 +1,8 @@
-import { AuthHeader } from "../../../layout";
-import { CodeForm } from "./CodeForm";
+import { AuthHeader } from "@pages/auth/layout/AuthHeader";
+import { useResetPassContext } from "../hooks/useResetPassContext";
 import { ChangePassForm } from "./ChangePassForm";
+import { CodeForm } from "./CodeForm";
 import { SendCodeForm } from "./SendCodeForm";
-import { useResetPassContext } from "../hooks";
 
 const RESET_PASS_FORMS = {
 	sendCode: <SendCodeForm />,

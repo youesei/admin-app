@@ -1,6 +1,6 @@
-import { AuthLayout } from "../../../layout";
-import { ResetPassForms } from "../components";
-import { ResetPassProvider } from "../context";
+import { AuthLayout } from "@pages/auth/layout/AuthLayout";
+import { ResetPassForms } from "../components/ResetPassForms";
+import { ResetPassProvider } from "../context/ResetPassContext";
 
 export const ResetPassPage = () => {
 	return (

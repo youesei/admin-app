@@ -1,6 +1,7 @@
-import { ResetPassPage } from "../pages";
+import { ROUTES } from "@constants/globalConsts";
+import { ResetPassPage } from "../pages/ResetPassPage";
 
 export const ResetpassRoutes = {
-	path: "/resetpass",
+	path: ROUTES.RESETPASS,
 	element: <ResetPassPage />,
 };

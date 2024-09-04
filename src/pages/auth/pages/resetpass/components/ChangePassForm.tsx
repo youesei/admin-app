@@ -1,16 +1,16 @@
+import { useFormulary } from "@hooks/useFormulary";
+import { Button } from "@ui/button";
 import {
-	Button,
 	Form,
 	FormControl,
 	FormField,
 	FormItem,
 	FormLabel,
 	FormMessage,
-	Input,
-} from "@/components/ui";
-import { useFormulary } from "@/pages/hooks";
-import { changePassSchema } from "../schemas";
-import { changePassInitialValues } from "../models";
+} from "@ui/form";
+import { Input } from "@ui/input";
+import { changePassInitialValues } from "../constants/sendCodeInitialValues";
+import { changePassSchema } from "../schemas/resetPassSchemas";
 
 export const ChangePassForm = () => {
 	const { form } = useFormulary(changePassSchema, changePassInitialValues);

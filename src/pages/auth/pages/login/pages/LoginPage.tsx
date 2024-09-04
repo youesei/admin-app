@@ -1,5 +1,6 @@
-import { LoginForm } from "../components";
-import { AuthHeader, AuthLayout } from "../../../layout";
+import { AuthHeader } from "@pages/auth/layout/AuthHeader";
+import { AuthLayout } from "@pages/auth/layout/AuthLayout";
+import { LoginForm } from "../components/LoginForm";
 
 export const LoginPage = () => {
 	return (

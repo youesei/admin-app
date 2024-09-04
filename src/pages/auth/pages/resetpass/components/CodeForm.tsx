@@ -1,19 +1,21 @@
+import { useFormulary } from "@hooks/useFormulary";
+import { Button } from "@ui/button";
 import {
-	Button,
 	Form,
 	FormControl,
 	FormField,
 	FormItem,
 	FormLabel,
 	FormMessage,
+} from "@ui/form";
+import {
 	InputOTP,
 	InputOTPGroup,
 	InputOTPSlot,
-} from "@/components/ui";
-import { useFormulary } from "@/pages/hooks";
-import { verificationCodeSchema } from "../schemas";
-import { codeInitialValues } from "../models";
-import { useResetPassContext } from "../hooks";
+} from "@ui/input-otp";
+import { codeInitialValues } from "../constants/sendCodeInitialValues";
+import { useResetPassContext } from "../hooks/useResetPassContext";
+import { verificationCodeSchema } from "../schemas/resetPassSchemas";
 
 export const CodeForm = () => {
 	const { form } = useFormulary(verificationCodeSchema, codeInitialValues);

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -52,6 +51,12 @@
     /* Scrollbar */
     --sb-thumb-color: #3c3c3c;
     --sb-size: 8px;
+  }
+}
+
+@layer components {
+  .card-animation {
+    @apply transition duration-300 ease-in-out hover:scale-105;
   }
 }
 

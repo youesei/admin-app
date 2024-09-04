@@ -1,7 +1,5 @@
-interface handleChangePropsTypes {
-	data: { key: string; value: string };
-	callback: ({ key, value }: { key: string; value: string }) => void;
-}
+import type { handleChangePropsTypes } from "../types/types.d";
+
 export const handleChangeProps = ({
 	data,
 	callback,

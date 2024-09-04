@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ResetPassContext } from "../context";
-import type { ResetPassContextTypes } from "../types";
+import { ResetPassContext } from "../context/ResetPassContext";
+import type { ResetPassContextTypes } from "../types/types.d";
 
 export const useResetPassContext = () => {
 	const context = useContext(ResetPassContext) as ResetPassContextTypes;

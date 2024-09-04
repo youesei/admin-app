@@ -1,10 +1,10 @@
-import { z } from "zod";
 import {
 	codeSchema,
 	emailSchema,
 	passwordConfirmSchema,
 	passwordSchema,
-} from "@/pages/schemas";
+} from "@schemas/globalsSchemas";
+import { z } from "zod";
 
 export const changePassSchema = z.object({
 	password: passwordSchema,

@@ -1,17 +1,11 @@
-import { AppLayout } from "@/layout";
-import type { ReactNode } from "react";
+import type { AuthLayoutTypes } from "../types/types.d";
 
-export const AuthLayout = ({
-	children,
-	className,
-}: { children: ReactNode; className?: string }) => {
+export const AuthLayout = ({ children, className }: AuthLayoutTypes) => {
 	return (
-		<AppLayout>
-			<section
-				className={`grid w-full p-10 place-items-center rounded-xl bg-card ${className}`}
-			>
-				{children}
-			</section>
-		</AppLayout>
+		<section
+			className={`grid w-full p-10 place-items-center rounded-xl bg-card ${className}`}
+		>
+			{children}
+		</section>
 	);
 };

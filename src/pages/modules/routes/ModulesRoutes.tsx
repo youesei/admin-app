@@ -1,6 +1,7 @@
-import { ModulesPage } from "../pages";
+import { ROUTES } from "@constants/globalConsts";
+import { ModulesPage } from "../pages/ModulesPage";
 
 export const ModulesRoutes = {
-	path: "/modules",
+	path: ROUTES.MODULES,
 	element: <ModulesPage />,
 };

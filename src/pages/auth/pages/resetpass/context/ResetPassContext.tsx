@@ -1,11 +1,15 @@
-import { type ReactNode, createContext, useState } from "react";
-import type { ResetPassContextTypes, ResetPassStateTypes } from "../types";
+import { createContext, useState } from "react";
+import type {
+	ResetPassContextTypes,
+	ResetPassProviderTypes,
+	ResetPassStateTypes,
+} from "../types/types.d";
 
 export const ResetPassContext = createContext<ResetPassContextTypes | null>(
 	null,
 );
 
-export const ResetPassProvider = ({ children }: { children: ReactNode }) => {
+export const ResetPassProvider = ({ children }: ResetPassProviderTypes) => {
 	const [state, setState] = useState<ResetPassStateTypes>({
 		email: "",
 		code: "",

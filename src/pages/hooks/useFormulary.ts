@@ -10,8 +10,5 @@ export const useFormulary = <T extends z.ZodSchema>(
 		resolver: zodResolver(schema),
 		defaultValues: initialValues,
 	});
-
-	console.log(form);
-
 	return { form };
 };
